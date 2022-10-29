@@ -1,0 +1,16 @@
+#cv-container {
+    margin: auto;
+    margin-top: 20vh;
+    width: 90%;
+    height: 100vh;
+    position: relative;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div {
+        background: #fff;
+        width: 90%;
+        height: 90%;
+    }
+}

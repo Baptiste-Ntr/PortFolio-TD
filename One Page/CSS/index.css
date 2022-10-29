@@ -1,6 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Permanent+Marker&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Permanent+Marker&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Permanent+Marker&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Permanent+Marker&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #333;
+  height: 400vh;
+  width: 100%;
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
 header {
   height: 100vh;
   width: 100%;
@@ -24,6 +40,7 @@ header nav ul {
 }
 header nav ul li {
   font-size: 1.5em;
+  cursor: pointer;
 }
 header #boule1 {
   height: 400px;
@@ -94,17 +111,92 @@ header #scroll-container #mouse::after {
   margin-top: 10px;
 }
 
-*, ::before, ::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+#projects-container {
+  height: 800px;
+  width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20vh;
+  position: relative;
+}
+#projects-container section {
+  height: 70%;
+  width: 100%;
+  background: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#projects-container section div {
+  width: 90%;
+  height: 80px;
+  background: green;
+  border-radius: 5px;
+}
+#projects-container section div h3 {
+  line-height: 80px;
+  text-align: right;
+  margin-right: 200px;
+}
+#projects-container section div aside {
+  height: 70px;
+  width: 70px;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 2px;
+  float: left;
+  background: #000;
 }
 
-body {
-  background: #333;
-  height: 400vh;
+#cv-container {
+  margin: auto;
+  margin-top: 20vh;
+  width: 90%;
+  height: 100vh;
+  position: relative;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#cv-container div {
+  background: #fff;
+  width: 90%;
+  height: 90%;
+}
+
+#contact-form {
+  margin-top: 20vh;
+  height: 100vh;
   width: 100%;
-  font-size: 1em;
-  font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
+  background: #000;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+#contact-form form {
+  height: 70%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#contact-form form h1 {
+  text-align: center;
+  font-size: 3em;
+  color: #fff;
+}
+#contact-form form input {
+  width: 50%;
+  height: 40px;
+}
+#contact-form form input[type=button] {
+  width: 20%;
+  height: 70px;
 }/*# sourceMappingURL=index.css.map */

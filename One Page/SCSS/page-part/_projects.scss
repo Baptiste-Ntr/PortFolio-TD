@@ -1,0 +1,43 @@
+@import '../var/index-var';
+
+#projects-container {
+    height: 800px;
+    width: 600px;
+    // background: #000;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20vh;
+    position: relative;
+    section {
+        height: 70%;
+        width: 100%;
+        background: red;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        div {
+            width: 90%;
+            height: 80px;
+            background: green;
+            border-radius: 5px;
+            h3 {
+                line-height: 80px;
+                text-align: right;
+                margin-right: 200px;
+            }
+            aside {
+                height: 70px;
+                width: 70px;
+                margin-top: 5px;
+                margin-left: 5px;
+                border-radius: 2px;
+                float: left;
+                background: #000;
+            }
+        }
+    }
+}
