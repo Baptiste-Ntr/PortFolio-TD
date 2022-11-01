@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Permanent+Marker&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Permanent+Marker&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Permanent+Marker&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Permanent+Marker&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 *, ::before, ::after {
   margin: 0;
   padding: 0;
@@ -9,29 +7,82 @@
 }
 
 body {
-  background: #333;
-  height: 400vh;
+  background: linear-gradient(185.38deg, #FBAB7E 0%, #F7CE68 100%);
+  height: 410vh;
   width: 100%;
   font-size: 1em;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
 
+@-webkit-keyframes txtscroll {
+  from {
+    scale: 1;
+  }
+  50% {
+    scale: 1.15;
+  }
+}
+
+@keyframes txtscroll {
+  from {
+    scale: 1;
+  }
+  50% {
+    scale: 1.15;
+  }
+}
+@-webkit-keyframes mouse {
+  from {
+    transform: translate(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+@keyframes mouse {
+  from {
+    transform: translate(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+@-webkit-keyframes scroll {
+  from {
+    transform: translate(0);
+    background-color: #333;
+  }
+  50% {
+    transform: translateY(15px);
+    background-color: #fff;
+  }
+}
+@keyframes scroll {
+  from {
+    transform: translate(0);
+    background-color: #333;
+  }
+  50% {
+    transform: translateY(15px);
+    background-color: #fff;
+  }
+}
 header {
   height: 100vh;
   width: 100%;
-  background: #333;
   position: relative;
 }
 header nav {
   height: 10%;
-  background: #fff;
+  width: 40%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
 }
 header nav ul {
   height: 100%;
-  background: red;
-  width: 40%;
-  float: right;
   list-style: none;
   display: flex;
   justify-content: space-around;
@@ -39,8 +90,24 @@ header nav ul {
   position: relative;
 }
 header nav ul li {
-  font-size: 1.5em;
+  font-size: 2em;
   cursor: pointer;
+  color: #fff;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+header nav ul li::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 2px;
+  background: #fff;
+  margin: auto;
+  border-radius: 5px;
+  transition: 0.2s all ease-in-out;
+}
+header nav ul li:hover::after {
+  width: 30px;
 }
 header #boule1 {
   height: 400px;
@@ -59,11 +126,11 @@ header section {
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  margin-top: 25vh;
+  margin-top: 30vh;
   color: #fff;
 }
 header section h1 {
-  font-size: 4em;
+  font-size: 4rem;
   font-weight: 800;
 }
 header section #barre-title {
@@ -87,7 +154,7 @@ header #scroll-container {
   height: 100px;
   width: 100px;
   margin: auto;
-  margin-top: 20vh;
+  margin-top: 25vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -97,23 +164,37 @@ header #scroll-container {
 header #scroll-container #mouse {
   height: 60px;
   width: 40px;
-  background: #000;
+  background: #fff;
   border-radius: 18px;
+  -webkit-animation: mouse 2s infinite ease-in-out;
+          animation: mouse 2s infinite ease-in-out;
 }
 header #scroll-container #mouse::after {
   content: "";
   display: block;
   height: 10px;
   width: 10px;
-  background: #fff;
+  background: linear-gradient(185.38deg, #FBAB7E 0%, #F7CE68 100%);
   border-radius: 50%;
   margin: auto;
   margin-top: 10px;
+  -webkit-animation: scroll 2s infinite ease-in-out;
+          animation: scroll 2s infinite ease-in-out;
+}
+header #scroll-container h5 {
+  color: #fff;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 10px;
+  -webkit-animation: txtscroll 2s infinite ease-in-out;
+          animation: txtscroll 2s infinite ease-in-out;
 }
 
 #projects-container {
   height: 800px;
   width: 600px;
+  background: #fff;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -121,42 +202,63 @@ header #scroll-container #mouse::after {
   justify-content: space-around;
   margin-top: 20vh;
   position: relative;
+  border: 10px solid #333;
+  border-radius: 5px;
+}
+#projects-container h1 {
+  color: #333;
+  font-size: 3em;
 }
 #projects-container section {
   height: 70%;
   width: 100%;
-  background: red;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 #projects-container section div {
+  cursor: pointer;
   width: 90%;
-  height: 80px;
-  background: green;
+  height: 100px;
+  background: rgb(34, 34, 34);
   border-radius: 5px;
+  transition: all 0.5s ease;
 }
 #projects-container section div h3 {
-  line-height: 80px;
+  line-height: 100px;
   text-align: right;
   margin-right: 200px;
+  color: #fff;
+  font-size: 2em;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
 }
 #projects-container section div aside {
-  height: 70px;
-  width: 70px;
-  margin-top: 5px;
-  margin-left: 5px;
+  height: 80px;
+  width: 80px;
+  margin-top: 10px;
+  margin-left: 10px;
   border-radius: 2px;
   float: left;
   background: #000;
+}
+#projects-container section div:hover {
+  scale: 1.15;
+  background: #fff;
+  transform: translateX(50px) translateY(-20px);
+  box-shadow: -15px 30px 50px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+#projects-container section div:hover h3 {
+  color: #333;
 }
 
 #cv-container {
   margin: auto;
   margin-top: 20vh;
   width: 90%;
-  height: 100vh;
+  height: 90vh;
   position: relative;
   background: #000;
   display: flex;
@@ -171,16 +273,18 @@ header #scroll-container #mouse::after {
 
 #contact-form {
   margin-top: 20vh;
-  height: 100vh;
-  width: 100%;
-  background: #000;
+  height: 90vh;
+  width: 90%;
   display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
+  margin: auto;
 }
 #contact-form form {
-  height: 70%;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  height: 80%;
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -192,9 +296,50 @@ header #scroll-container #mouse::after {
   font-size: 3em;
   color: #fff;
 }
-#contact-form form input {
+#contact-form form div:nth-child(4) {
+  height: 100px;
+}
+#contact-form form div {
   width: 50%;
-  height: 40px;
+  height: 50px;
+  position: relative;
+}
+#contact-form form div input, #contact-form form div textarea {
+  height: 100%;
+  width: 100%;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #fff;
+  transition: all 0.5s ease;
+  margin-left: 10px;
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+}
+#contact-form form div input:focus, #contact-form form div textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #fff;
+}
+#contact-form form div input:focus ~ span, #contact-form form div textarea:focus ~ span {
+  top: -40px;
+  font-size: 2rem;
+}
+#contact-form form div span {
+  position: absolute;
+  pointer-events: none;
+  transition: 0.2s all ease;
+  top: 18px;
+  left: 10px;
+  z-index: 10;
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+#contact-form form #form-message {
+  resize: none;
 }
 #contact-form form input[type=button] {
   width: 20%;

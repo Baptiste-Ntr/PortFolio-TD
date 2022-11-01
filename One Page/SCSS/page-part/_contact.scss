@@ -1,14 +1,18 @@
 #contact-form {
     margin-top: 20vh;
-    height: 100vh;
-    width: 100%;
-    background: #000;
+    height: 90vh;
+    width: 90%;
+    // background: #000;
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
+    margin: auto;
     form {
-        height: 70%;
+        // background: #000;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        height: 80%;
         width: 70%;
         display: flex;
         flex-direction: column;
@@ -19,12 +23,66 @@
             font-size: 3em;
             color: $font-color1;
         }
-        input {
-            width: 50%;
-            height: 40px;
+        div:nth-child(4) {
+            height: 100px;
         }
-        #form-message {
+        div {
+            width: 50%;
+            height: 50px;
+            position: relative;
+            // background: #000;
+            // &:last-child {
+            //     width: 50%;
+            //     height: 100px;
+            //     textarea {
+            //         height: 100%;
+            //         width: 100%;
+            //         background: none;
+            //         border-top: none;
+            //         border-left: none;
+            //         border-right: none;
+            //         border-bottom: 2px solid #fff;
+            //     }
+            // }
+            input, textarea{
+                height: 100%;
+                width: 100%;
+                background: none;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom:1px solid #fff;
+                transition: all 0.5s ease;
+                margin-left: 10px;
+                font-size: 1.5rem;
+                color: $font-color1;
+                font-family: $Font2;
+                cursor: pointer;
+                &:focus {
+                    outline: none;
+                    border-bottom: 2px solid #fff;
+                }
+            }
 
+            input:focus ~ span, textarea:focus ~ span {
+                top: -40px;
+                font-size: 2rem;
+            }
+            span {
+                position: absolute;
+                pointer-events: none;
+                transition: 0.2s all ease;
+                top: 18px;
+                left: 10px;
+                z-index: 10;
+                color: $font-color1;
+                font-size: 1.5rem;
+                font-family: $Font2;
+            }
+        }
+        
+        #form-message {
+            resize: none;
         }
         input[type="button"] {
             width: 20%;

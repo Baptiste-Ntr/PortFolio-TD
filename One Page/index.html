@@ -1,3 +1,6 @@
+<!-- Copyright Baptiste Nautré
+    Github : https://github.com/Baptiste-Ntr -->
+
 <!DOCTYPE html>
 <html lang="FR">
 <head>
@@ -7,14 +10,17 @@
     <title>PortFolio de Baptiste Nautré</title>
     <!-- Link Index CSS -->
     <link rel="stylesheet" href="./CSS/index.css">
+
+    <!-- Link JS Script (load at the end of the page) -->
+    <script defer src="./JS/checkViewPort.js"></script>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li>Projets</li>
-                <li>CV</li>
-                <li>Contact</li>
+                <li id="nav_projets">Projets</li>
+                <li id="nav_cv">CV</li>
+                <li id="nav_contact">Contact</li>
             </ul>
         </nav>
         <div id="boule1"></div>
@@ -26,7 +32,7 @@
         <div id="boule2"></div>
         <div id="scroll-container">
             <div id="mouse"></div>
-            <h5>SCROLL</h5>
+            <h5>SCROLL !</h5>
         </div>
     </header>
     <section id="projects-container">
@@ -56,9 +62,18 @@
     <section id="contact-form">
         <form action="">
             <h1>Contact</h1>
-            <input type="text" name="" id="form-name">
-            <input type="email" name="" id="form-mail">
-            <textarea name="" id="form-message" cols="30" rows="10"></textarea>
+            <div class="input-name">
+                <input type="text" name="" id="form-name" required>
+                <span id="name">Nom</span>
+            </div>
+            <div class="input-mail">
+                <input type="email" name="" id="form-mail" required>
+                <span id="mail">Email</span>
+            </div>
+            <div class="input-message" >
+                <textarea name="" id="form-message" cols="80" rows="10" required></textarea>
+                <span id="message">Votre message</span>
+            </div>
             <input type="button" value="Envoyer" id="btnsend">
         </form>
     </section>
