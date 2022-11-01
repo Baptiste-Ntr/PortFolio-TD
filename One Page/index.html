@@ -13,6 +13,7 @@
 
     <!-- Link JS Script (load at the end of the page) -->
     <script defer src="./JS/checkViewPort.js"></script>
+    <script defer src="./JS/setScroll.js"></script>
 </head>
 <body>
     <header>
@@ -67,14 +68,14 @@
                 <span id="name">Nom</span>
             </div>
             <div class="input-mail">
-                <input type="email" name="" id="form-mail" required>
+                <input type="text" name="" id="form-mail" required>
                 <span id="mail">Email</span>
             </div>
             <div class="input-message" >
                 <textarea name="" id="form-message" cols="80" rows="10" required></textarea>
                 <span id="message">Votre message</span>
             </div>
-            <input type="button" value="Envoyer" id="btnsend">
+            <button type="submit" id="btnsend">Envoyer</button>
         </form>
     </section>
 </body>

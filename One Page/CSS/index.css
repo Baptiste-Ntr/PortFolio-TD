@@ -113,10 +113,66 @@ header #boule1 {
   height: 400px;
   width: 400px;
   border-radius: 50%;
-  background: #fff;
+  background: linear-gradient(185.38deg, #FBAB7E 0%, #F7CE68 100%);
   position: absolute;
   right: -100px;
-  margin-top: 100px;
+  top: -300px;
+  filter: hue-rotate(0deg);
+  -webkit-animation: move 45s infinite ease-in-out;
+          animation: move 45s infinite ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+  --i: 1.25;
+  --s: 2.5;
+}
+@-webkit-keyframes huerotate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+  to {
+    filter: hue-rotate(0deg);
+  }
+}
+@keyframes huerotate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+  to {
+    filter: hue-rotate(0deg);
+  }
+}
+@-webkit-keyframes move {
+  from {
+    transform: scale(1.645) translate3d(0px, 0px, 0px);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(2.5) translate3d(calc(var(--i) * 2.5vh), calc(var(--i) * 1vh), 0px);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.645) translate3d(0px, 0px, 0px);
+    opacity: 0.85;
+  }
+}
+@keyframes move {
+  from {
+    transform: scale(1.645) translate3d(0px, 0px, 0px);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(2.5) translate3d(calc(var(--i) * 2.5vh), calc(var(--i) * 1vh), 0px);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.645) translate3d(0px, 0px, 0px);
+    opacity: 0.85;
+  }
 }
 header section {
   height: 30%;
@@ -137,6 +193,7 @@ header section #barre-title {
   width: 200px;
   height: 5px;
   background: #fff;
+  border-radius: 3px;
 }
 header section h4 {
   font-size: 2em;
@@ -146,9 +203,14 @@ header #boule2 {
   height: 600px;
   width: 600px;
   border-radius: 50%;
-  background: #fff;
+  background: linear-gradient(185.38deg, #FBAB7E 0%, #F7CE68 100%);
   position: absolute;
   left: -200px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+  -webkit-animation: move 50s infinite ease;
+          animation: move 50s infinite ease;
+  --i: -1;
+  --s: 2;
 }
 header #scroll-container {
   height: 100px;
@@ -260,7 +322,6 @@ header #scroll-container h5 {
   width: 90%;
   height: 90vh;
   position: relative;
-  background: #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -293,7 +354,7 @@ header #scroll-container h5 {
 }
 #contact-form form h1 {
   text-align: center;
-  font-size: 3em;
+  font-size: 4em;
   color: #fff;
 }
 #contact-form form div:nth-child(4) {
@@ -323,7 +384,8 @@ header #scroll-container h5 {
   outline: none;
   border-bottom: 2px solid #fff;
 }
-#contact-form form div input:focus ~ span, #contact-form form div textarea:focus ~ span {
+#contact-form form div input:focus ~ span, #contact-form form div textarea:focus ~ span, #contact-form form div input:not(:focus):valid ~ span,
+#contact-form form div textarea:not(:focus):valid ~ span {
   top: -40px;
   font-size: 2rem;
 }
@@ -341,7 +403,25 @@ header #scroll-container h5 {
 #contact-form form #form-message {
   resize: none;
 }
-#contact-form form input[type=button] {
+#contact-form form button {
   width: 20%;
   height: 70px;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  background: #ffc941;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  border: 5px solid #fff;
+  border-radius: 20px;
+  transition: all 0.1s ease-in-out;
+}
+#contact-form form button:hover {
+  scale: 1.05;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+#contact-form form button:active {
+  scale: 1.1;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transform: translateY(-10px);
 }/*# sourceMappingURL=index.css.map */

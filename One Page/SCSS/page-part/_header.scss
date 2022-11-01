@@ -44,11 +44,48 @@ header {
         height: 400px;
         width: 400px;
         border-radius: 50%;
-        background: #fff;
+        background: $background;
         position: absolute;
         right: -100px;
-        margin-top: 100px;
+        top: -300px;
+        filter: hue-rotate(0deg);
+        // animation: huerotate 150s infinite ease;
+        animation: move 45s infinite ease-in-out ;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+        --i: 1.25;
+        --s: 2.5;
     }
+
+    @keyframes huerotate {
+        from {
+            filter: hue-rotate(0deg);
+        }
+
+        50% {
+            filter: hue-rotate(360deg);
+        }
+
+        to {
+            filter: hue-rotate(0deg);
+        }
+    }
+    @keyframes move {
+        from {
+            transform: scale(1.645) translate3d(0px, 0px, 0px);
+            opacity: 0.85;
+        }
+    
+        50% {
+            transform: scale(2.5) translate3d(calc(var(--i)*2.5vh), calc(var(--i)*1vh), 0px);
+            opacity: 1;
+        }
+    
+        to {
+            transform: scale(1.645) translate3d(0px, 0px, 0px);
+            opacity: 0.85;
+        }
+    }
+    
     section {
         height: 30%;
         width: 50%;
@@ -68,6 +105,7 @@ header {
             width: 200px;
             height: 5px;
             background: #fff;
+            border-radius: 3px;
         }
         h4 {
             font-size: 2em;
@@ -78,9 +116,14 @@ header {
         height: 600px;
         width: 600px;
         border-radius: 50%;
-        background: #fff;
+        background: $background;
         position: absolute;
         left: -200px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+        // animation: huerotate 100s infinite ease;
+        animation: move 50s infinite ease;
+        --i: -1;
+        --s: 2;
     }
     #scroll-container{
         height: 100px;

@@ -29,7 +29,7 @@ console.log(contact);
 function viewPort() {
     if (checkViewPort(project)) {
         console.log("1");
-        console.log(window.getComputedStyle(document.querySelector('#nav_projets'), ':before').setProperty("width", "[50px]"));
+        // console.log(window.getComputedStyle(document.querySelector('#nav_projets'), ':before').setProperty("width", "[50px]"));
         // window.getComputedStyle(document.getElementById('nav_projets'), ':after').getPropertyValue('width', ['50px']);
     } else if (checkViewPort(cv)) {
         console.log("2");
