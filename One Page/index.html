@@ -15,8 +15,14 @@
     <!-- Link JS Script (load at the end of the page) -->
     <script defer src="./JS/checkViewPort.js"></script>
     <script defer src="./JS/setScroll.js"></script>
+    <script defer src="./JS/animText.js"></script>
+    <script defer src="./JS/displayCV.js"></script>
+
+    <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
+
     <header>
         <nav>
             <ul>
@@ -29,7 +35,7 @@
         <section>
             <h1>Baptiste Nautré</h1>
             <div id="barre-title"></div>
-            <h4 id="animtxt">Développeur Front-End</h4>
+            <h4 id="animtxt"></h4>
         </section>
         <div id="boule2"></div>
         <div id="scroll-container">
@@ -37,6 +43,11 @@
             <h5>SCROLL !</h5>
         </div>
     </header>
+
+    <footer>
+        <ion-icon name="arrow-up-outline" id="arrow"></ion-icon>
+    </footer>
+
     <section id="projects-container">
         <h1>Liste Projets</h1>
         <section>
@@ -58,9 +69,18 @@
             </div>
         </section>
     </section>
+
     <section id="cv-container">
-        <div></div>
+        <img src="./SRC/PNG/CV(petit).png" alt="CV" id="cvimg">
+        <aside>
+            <button id="dl"><span>Telecharger</span></button>
+            <button id="print"><span>Imprimer</span></button>
+        </aside>
+        <div id="bigimg">
+            <img src="./SRC/PNG/CV.png" alt="cv en gros">
+        </div>
     </section>
+
     <section id="contact-form">
         <form action="">
             <h1>Contact</h1>

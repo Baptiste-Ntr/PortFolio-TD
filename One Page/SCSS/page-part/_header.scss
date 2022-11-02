@@ -1,4 +1,7 @@
 @import '../keyframes/scroll-mouse';
+@import '../keyframes/boulemove';
+@import '../keyframes/arrow';
+
 header {
     height: 100vh;
     width: 100%;
@@ -50,40 +53,11 @@ header {
         top: -300px;
         filter: hue-rotate(0deg);
         // animation: huerotate 150s infinite ease;
-        animation: move 45s infinite ease-in-out ;
+        animation: move 45s infinite ease-in-out;
         box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
         --i: 1.25;
         --s: 2.5;
-    }
-
-    @keyframes huerotate {
-        from {
-            filter: hue-rotate(0deg);
-        }
-
-        50% {
-            filter: hue-rotate(360deg);
-        }
-
-        to {
-            filter: hue-rotate(0deg);
-        }
-    }
-    @keyframes move {
-        from {
-            transform: scale(1.645) translate3d(0px, 0px, 0px);
-            opacity: 0.85;
-        }
-    
-        50% {
-            transform: scale(2.5) translate3d(calc(var(--i)*2.5vh), calc(var(--i)*1vh), 0px);
-            opacity: 1;
-        }
-    
-        to {
-            transform: scale(1.645) translate3d(0px, 0px, 0px);
-            opacity: 0.85;
-        }
+        z-index: -1;
     }
     
     section {
@@ -96,6 +70,7 @@ header {
         align-items: center;
         margin-top: 30vh;
         color: $font-color1;
+        z-index: 999;
         h1 {
             font-size: 4rem;
             font-weight: 800;
@@ -124,6 +99,7 @@ header {
         animation: move 50s infinite ease;
         --i: -1;
         --s: 2;
+        z-index: -1;
     }
     #scroll-container{
         height: 100px;
@@ -162,4 +138,9 @@ header {
             animation: txtscroll 2s infinite ease-in-out;
         }
     }
+}
+
+.front-end {
+    font-family: $Font3;
+    color: #333;
 }

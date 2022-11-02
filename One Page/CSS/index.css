@@ -68,6 +68,56 @@ body {
     background-color: #fff;
   }
 }
+@-webkit-keyframes move {
+  from {
+    transform: scale(1.645) translate3d(0px, 0px, 0px);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(2.5) translate3d(calc(var(--i) * 2.5vh), calc(var(--i) * 1vh), 0px);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.645) translate3d(0px, 0px, 0px);
+    opacity: 0.85;
+  }
+}
+@keyframes move {
+  from {
+    transform: scale(1.645) translate3d(0px, 0px, 0px);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(2.5) translate3d(calc(var(--i) * 2.5vh), calc(var(--i) * 1vh), 0px);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.645) translate3d(0px, 0px, 0px);
+    opacity: 0.85;
+  }
+}
+@-webkit-keyframes arrow {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes arrow {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 header {
   height: 100vh;
   width: 100%;
@@ -123,56 +173,7 @@ header #boule1 {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
   --i: 1.25;
   --s: 2.5;
-}
-@-webkit-keyframes huerotate {
-  from {
-    filter: hue-rotate(0deg);
-  }
-  50% {
-    filter: hue-rotate(360deg);
-  }
-  to {
-    filter: hue-rotate(0deg);
-  }
-}
-@keyframes huerotate {
-  from {
-    filter: hue-rotate(0deg);
-  }
-  50% {
-    filter: hue-rotate(360deg);
-  }
-  to {
-    filter: hue-rotate(0deg);
-  }
-}
-@-webkit-keyframes move {
-  from {
-    transform: scale(1.645) translate3d(0px, 0px, 0px);
-    opacity: 0.85;
-  }
-  50% {
-    transform: scale(2.5) translate3d(calc(var(--i) * 2.5vh), calc(var(--i) * 1vh), 0px);
-    opacity: 1;
-  }
-  to {
-    transform: scale(1.645) translate3d(0px, 0px, 0px);
-    opacity: 0.85;
-  }
-}
-@keyframes move {
-  from {
-    transform: scale(1.645) translate3d(0px, 0px, 0px);
-    opacity: 0.85;
-  }
-  50% {
-    transform: scale(2.5) translate3d(calc(var(--i) * 2.5vh), calc(var(--i) * 1vh), 0px);
-    opacity: 1;
-  }
-  to {
-    transform: scale(1.645) translate3d(0px, 0px, 0px);
-    opacity: 0.85;
-  }
+  z-index: -1;
 }
 header section {
   height: 30%;
@@ -184,6 +185,7 @@ header section {
   align-items: center;
   margin-top: 30vh;
   color: #fff;
+  z-index: 999;
 }
 header section h1 {
   font-size: 4rem;
@@ -211,6 +213,7 @@ header #boule2 {
           animation: move 50s infinite ease;
   --i: -1;
   --s: 2;
+  z-index: -1;
 }
 header #scroll-container {
   height: 100px;
@@ -253,10 +256,15 @@ header #scroll-container h5 {
           animation: txtscroll 2s infinite ease-in-out;
 }
 
+.front-end {
+  font-family: "Permanent Marker", cursive;
+  color: #333;
+}
+
 #projects-container {
   height: 800px;
   width: 600px;
-  background: #fff;
+  background: linear-gradient(185.38deg, #FBAB7E 0%, #F7CE68 100%);
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -264,11 +272,12 @@ header #scroll-container h5 {
   justify-content: space-around;
   margin-top: 20vh;
   position: relative;
-  border: 10px solid #333;
+  border: 10px solid #fff;
   border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 #projects-container h1 {
-  color: #333;
+  color: #fff;
   font-size: 3em;
 }
 #projects-container section {
@@ -323,13 +332,76 @@ header #scroll-container h5 {
   height: 90vh;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
-#cv-container div {
-  background: #fff;
-  width: 90%;
-  height: 90%;
+#cv-container img {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+#cv-container aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+}
+#cv-container aside button {
+  width: 300px;
+  height: 100px;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.1s ease-in-out;
+  position: relative;
+}
+#cv-container aside button span {
+  position: relative;
+  z-index: 11;
+}
+#cv-container aside button::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 0%;
+  background-color: green;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s;
+}
+#cv-container aside button:hover:after {
+  width: 100%;
+  z-index: 10;
+}
+#cv-container aside button:hover {
+  scale: 1.05;
+}
+#cv-container aside button:active {
+  transform: translateY(-10px);
+  scale: 1.1;
+}
+#cv-container #bigimg {
+  display: none;
+  height: 120vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  position: absolute;
+  z-index: 99;
+  align-items: center;
+  justify-content: center;
+}
+#cv-container #bigimg img {
+  height: 90vh;
 }
 
 #contact-form {
@@ -424,4 +496,25 @@ header #scroll-container h5 {
   scale: 1.1;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   transform: translateY(-10px);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+footer ion-icon {
+  background: url("../../SRC/SVG/arrow.svg");
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  margin-right: 40px;
+  cursor: pointer;
+  -webkit-animation: arrow 2s infinite ease-in-out;
+          animation: arrow 2s infinite ease-in-out;
 }/*# sourceMappingURL=index.css.map */

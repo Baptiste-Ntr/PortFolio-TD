@@ -1,0 +1,20 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    // background: #000;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    ion-icon {
+        background: url('../../SRC/SVG/arrow.svg');
+        height: 40px;
+        width: 40px;
+        color: #fff;
+        margin-right: 40px;
+        cursor: pointer;
+        animation: arrow 2s infinite ease-in-out;
+    }
+}
