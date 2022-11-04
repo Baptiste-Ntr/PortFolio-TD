@@ -28,13 +28,13 @@
             cursor: pointer;
             width: 90%;
             height: 100px;
-            background: rgb(34, 34, 34);
+            background: rgb(54, 54, 54);
             border-radius: 5px;
             transition: all 0.5s ease;
+            box-shadow: rgb(34, 34, 34) 3px 3px 6px 0px inset, rgba(34, 34, 34, 0.5) -3px 6px 1px inset;
             h3 {
                 line-height: 100px;
-                text-align: right;
-                margin-right: 200px;
+                text-align: center;
                 color: $font-color1;
                 font-size: 2em;
                 font-weight: 400;
@@ -47,7 +47,29 @@
                 margin-left: 10px;
                 border-radius: 2px;
                 float: left;
-                background: #000;
+                
+
+            }
+            &:nth-child(1) {
+                aside {
+                    background: url(../SRC/IMG/port.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+            &:nth-child(2) {
+                aside {
+                    background: url(../SRC/IMG/pw.jpg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+            &:nth-child(3) {
+                aside {
+                    background: url(../SRC/IMG/tp.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
             }
             &:hover {
                 scale: 1.15;

@@ -258,7 +258,7 @@ header #scroll-container h5 {
 
 .front-end {
   font-family: "Permanent Marker", cursive;
-  color: #333;
+  color: #fd7317;
 }
 
 #projects-container {
@@ -292,14 +292,14 @@ header #scroll-container h5 {
   cursor: pointer;
   width: 90%;
   height: 100px;
-  background: rgb(34, 34, 34);
+  background: rgb(54, 54, 54);
   border-radius: 5px;
   transition: all 0.5s ease;
+  box-shadow: rgb(34, 34, 34) 3px 3px 6px 0px inset, rgba(34, 34, 34, 0.5) -3px 6px 1px inset;
 }
 #projects-container section div h3 {
   line-height: 100px;
-  text-align: right;
-  margin-right: 200px;
+  text-align: center;
   color: #fff;
   font-size: 2em;
   font-weight: 400;
@@ -312,7 +312,21 @@ header #scroll-container h5 {
   margin-left: 10px;
   border-radius: 2px;
   float: left;
-  background: #000;
+}
+#projects-container section div:nth-child(1) aside {
+  background: url(../SRC/IMG/port.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#projects-container section div:nth-child(2) aside {
+  background: url(../SRC/IMG/pw.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#projects-container section div:nth-child(3) aside {
+  background: url(../SRC/IMG/tp.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 #projects-container section div:hover {
   scale: 1.15;
@@ -365,17 +379,33 @@ header #scroll-container h5 {
 }
 #cv-container aside button span {
   position: relative;
+  display: block;
   z-index: 11;
+  height: 100px;
+  width: 100%;
+  line-height: 100px;
+}
+#cv-container aside button span a {
+  text-decoration: none;
+  color: #fff;
+  line-height: 100px;
+  height: 100px;
+  width: 100%;
 }
 #cv-container aside button::after {
   content: "";
   display: block;
   height: 100%;
   width: 0%;
-  background-color: green;
   position: absolute;
   top: 0;
   transition: all 0.3s;
+}
+#cv-container aside button:nth-child(1):after {
+  background-color: green;
+}
+#cv-container aside button:nth-child(2)::after {
+  background-color: red;
 }
 #cv-container aside button:hover:after {
   width: 100%;
@@ -402,6 +432,9 @@ header #scroll-container h5 {
 }
 #cv-container #bigimg img {
   height: 90vh;
+}
+#cv-container #bigimgprint {
+  display: none;
 }
 
 #contact-form {
@@ -517,4 +550,29 @@ footer ion-icon {
   cursor: pointer;
   -webkit-animation: arrow 2s infinite ease-in-out;
           animation: arrow 2s infinite ease-in-out;
+}
+
+@media print {
+  body {
+    height: 50vh;
+  }
+  header {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+  #projects-container {
+    display: none;
+  }
+  #cv-container img {
+    position: absolute;
+    top: 10;
+  }
+  #cv-container aside {
+    display: none;
+  }
+  #contact-form {
+    display: none;
+  }
 }/*# sourceMappingURL=index.css.map */

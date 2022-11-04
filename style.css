@@ -1,0 +1,39 @@
+*,::after,::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+body button {
+    height: 100px;
+    width: 20%;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    border: none;
+}
+
+body button:hover {
+    scale: 1.05;
+}
+
+body button:active {
+    scale: 1.1;
+    transform: translateY(-10px);
+}
+
+body button span {
+    color: #000;
+    text-decoration: none;
+    font-family: "Arial", sans-serif;
+    font-size: 2em;
+}
