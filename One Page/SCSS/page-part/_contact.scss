@@ -10,7 +10,7 @@
     margin: auto;
     form {
         // background: #000;
-        border: 1px solid #fff;
+        // border: 1px solid #fff;
         border-radius: 10px;
         height: 80%;
         width: 70%;
@@ -85,10 +85,9 @@
         #form-message {
             resize: none;
         }
-        button {
+        div:nth-child(5) {
             width: 20%;
             height: 70px;
-            border: none;
             font-size: 2rem;
             color: $font-color1;
             background: #ffc941;
@@ -97,15 +96,23 @@
             border: 5px solid $font-color1;
             border-radius: 20px;
             transition: all 0.1s ease-in-out;
+            line-height: 70px;
+            text-align: center;
+
             &:hover {
                 scale: 1.05;
                 box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
             }
+
             &:active {
                 scale: 1.1;
                 box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
                 transform: translateY(-10px);
             }
+        }
+
+        input[type="submit"] {
+            display: none;
         }
 
     }

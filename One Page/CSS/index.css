@@ -175,6 +175,14 @@ header #boule1 {
   --s: 2.5;
   z-index: -1;
 }
+header #boule1:after {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+  content: "";
+  display: block;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+}
 header section {
   height: 30%;
   width: 50%;
@@ -214,6 +222,14 @@ header #boule2 {
   --i: -1;
   --s: 2;
   z-index: -1;
+}
+header #boule2:after {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+  content: "";
+  display: block;
+  height: 600px;
+  width: 600px;
+  border-radius: 50%;
 }
 header #scroll-container {
   height: 100px;
@@ -402,10 +418,10 @@ header #scroll-container h5 {
   transition: all 0.3s;
 }
 #cv-container aside button:nth-child(1):after {
-  background-color: green;
+  background-color: rgb(69, 223, 69);
 }
 #cv-container aside button:nth-child(2)::after {
-  background-color: red;
+  background-color: rgb(255, 87, 87);
 }
 #cv-container aside button:hover:after {
   width: 100%;
@@ -448,7 +464,6 @@ header #scroll-container h5 {
   margin: auto;
 }
 #contact-form form {
-  border: 1px solid #fff;
   border-radius: 10px;
   height: 80%;
   width: 70%;
@@ -508,10 +523,9 @@ header #scroll-container h5 {
 #contact-form form #form-message {
   resize: none;
 }
-#contact-form form button {
+#contact-form form div:nth-child(5) {
   width: 20%;
   height: 70px;
-  border: none;
   font-size: 2rem;
   color: #fff;
   background: #ffc941;
@@ -520,15 +534,20 @@ header #scroll-container h5 {
   border: 5px solid #fff;
   border-radius: 20px;
   transition: all 0.1s ease-in-out;
+  line-height: 70px;
+  text-align: center;
 }
-#contact-form form button:hover {
+#contact-form form div:nth-child(5):hover {
   scale: 1.05;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-#contact-form form button:active {
+#contact-form form div:nth-child(5):active {
   scale: 1.1;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   transform: translateY(-10px);
+}
+#contact-form form input[type=submit] {
+  display: none;
 }
 
 footer {

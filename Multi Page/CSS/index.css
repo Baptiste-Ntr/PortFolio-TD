@@ -173,7 +173,7 @@ header aside a {
   text-decoration: none;
 }
 header section {
-  height: 30%;
+  height: 20vh;
   width: 50%;
   margin: auto;
   display: flex;
@@ -218,10 +218,17 @@ header section h4 {
   filter: hue-rotate(0deg);
   -webkit-animation: move 45s infinite ease-in-out;
           animation: move 45s infinite ease-in-out;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
   --i: 1.25;
   --s: 2.5;
   z-index: -1;
+}
+#boule1:after {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+  content: "";
+  display: block;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
 }
 
 #boule2 {
@@ -232,12 +239,19 @@ header section h4 {
   position: absolute;
   top: 400px;
   left: -200px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
   -webkit-animation: move 50s infinite ease;
           animation: move 50s infinite ease;
   --i: -1;
   --s: 2;
   z-index: -1;
+}
+#boule2:after {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+  content: "";
+  display: block;
+  height: 600px;
+  width: 600px;
+  border-radius: 50%;
 }
 
 #projects-container {
@@ -319,7 +333,6 @@ header section h4 {
 
 #cv-container {
   margin: auto;
-  margin-top: 20vh;
   width: 90%;
   height: 90vh;
   position: relative;
@@ -380,10 +393,10 @@ header section h4 {
   transition: all 0.3s;
 }
 #cv-container aside button:nth-child(1):after {
-  background-color: green;
+  background-color: rgb(69, 223, 69);
 }
 #cv-container aside button:nth-child(2)::after {
-  background-color: red;
+  background-color: rgb(255, 87, 87);
 }
 #cv-container aside button:hover:after {
   width: 100%;
@@ -486,10 +499,9 @@ header section h4 {
 #contact-form form #form-message {
   resize: none;
 }
-#contact-form form button {
+#contact-form form div:nth-child(5) {
   width: 20%;
   height: 70px;
-  border: none;
   font-size: 2rem;
   color: #fff;
   background: #ffc941;
@@ -498,15 +510,20 @@ header section h4 {
   border: 5px solid #fff;
   border-radius: 20px;
   transition: all 0.1s ease-in-out;
+  line-height: 70px;
+  text-align: center;
 }
-#contact-form form button:hover {
+#contact-form form div:nth-child(5):hover {
   scale: 1.05;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-#contact-form form button:active {
+#contact-form form div:nth-child(5):active {
   scale: 1.1;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   transform: translateY(-10px);
+}
+#contact-form form input[type=submit] {
+  display: none;
 }
 
 @media print {

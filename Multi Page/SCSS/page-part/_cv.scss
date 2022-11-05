@@ -1,6 +1,6 @@
 #cv-container {
     margin: auto;
-    margin-top: 20vh;
+    // margin-top: 20vh;
     width: 90%;
     height: 90vh;
     position: relative;
@@ -56,10 +56,10 @@
                 transition: all 0.3s;
             }
             &:nth-child(1):after {
-                background-color: green;
+                background-color: rgb(69, 223, 69);
             }
             &:nth-child(2)::after {
-                background-color: red;
+                background-color: rgb(255, 87, 87);
             }
             &:hover:after {
                 width: 100%;

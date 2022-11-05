@@ -11,13 +11,13 @@ cvimg.addEventListener("click", () => {
 })
 
 
-    bigimg.addEventListener('click', () => {
-        bigimg.style.display = "none";
-        cv.scrollIntoView({
-            behavior: "smooth",
-            block: "center",
-            inline: "nearest",
-        })
+bigimg.addEventListener('click', () => {
+    bigimg.style.display = "none";
+    cv.scrollIntoView({
+        behavior: "smooth",
+        block: "end",
+        inline: "nearest",
     })
+})
 
 
