@@ -1,0 +1,97 @@
+<!-- Copyright Baptiste Nautré
+    Github : https://github.com/Baptiste-Ntr -->
+
+<!DOCTYPE html>
+<html lang="FR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortFolio de Baptiste Nautré</title>
+    <!-- Link Index CSS -->
+    <link rel="stylesheet" href="./CSS/index.css">
+    <!-- Link JS Script (load at the start of the page) -->
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <!-- Link JS Script (load at the end of the page) -->
+    <script defer src="./JS/checkViewPort.js"></script>
+    <script defer src="./JS/setScroll.js"></script>
+    <script defer src="./JS/animText.js"></script>
+    <script defer src="./JS/displayCV.js"></script>
+    <script defer src="./JS/print.js"></script>
+    <script defer src="./JS/setProject.js"></script>
+    <script defer src="./JS/redirection.js"></script>
+
+    <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li id="nav_projets">Projets</li>
+                <li id="nav_cv">CV</li>
+                <li id="nav_contact">Contact</li>
+            </ul>
+        </nav>
+        <div id="boule1"></div>
+        <section>
+            <h1>Baptiste Nautré</h1>
+            <div id="barre-title"></div>
+            <h4 id="animtxt"></h4>
+        </section>
+        <div id="boule2"></div>
+    </header>
+
+    <section id="projects-container">
+        <h1>Liste Projets</h1>
+        <section>
+            <div id="p1">
+                <aside></aside>
+                <h3>Premier PortFolio</h3>
+            </div>
+            <div id="p2">
+                <aside></aside>
+                <h3>PassWord</h3>
+            </div>
+            <div id="p3">
+                <aside></aside>
+                <h3>Integration TP</h3>
+            </div>
+        </section>
+    </section>
+
+    <section id="cv-container">
+        <img src="./SRC/IMG/CV(petit).png" alt="CV" id="cvimg">
+        <aside>
+            <button id="dl"><span><a href="./SRC/PDF/CV.pdf" download="">Telecharger</a></span></button>
+            <button id="print"><span>Imprimer</span></button>
+        </aside>
+        <div id="bigimg">
+            <img src="./SRC/IMG/CV.png" alt="cv en gros">
+        </div>
+        <div id="bigimgprint">
+            <img src="./SRC/IMG/CV.png" alt="cv pour imprimer">
+        </div>
+    </section>
+
+    <section id="contact-form">
+        <form action="">
+            <h1>Contact</h1>
+            <div class="input-name">
+                <input type="text" name="" id="form-name" required>
+                <span id="name">Nom</span>
+            </div>
+            <div class="input-mail">
+                <input type="text" name="" id="form-mail" required>
+                <span id="mail">Email</span>
+            </div>
+            <div class="input-message" >
+                <textarea name="" id="form-message" cols="80" rows="10" required></textarea>
+                <span id="message">Votre message</span>
+            </div>
+            <button type="submit" id="btnsend">Envoyer</button>
+        </form>
+    </section>
+</body>
+</html>

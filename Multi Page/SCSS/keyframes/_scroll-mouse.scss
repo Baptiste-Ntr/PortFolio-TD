@@ -1,0 +1,32 @@
+@keyframes txtscroll {
+    from {
+        scale: 1;
+    }
+
+    50% {
+        scale: 1.15;
+    }
+}
+
+@keyframes mouse {
+    from {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes scroll {
+    from {
+        transform: translate(0);
+        background-color: $font-color2;
+    }
+
+    50% {
+        transform: translateY(15px);
+        background-color: $font-color1;
+    }
+
+}
