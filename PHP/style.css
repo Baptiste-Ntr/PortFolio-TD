@@ -1,0 +1,17 @@
+.popup {
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease-in;
+}
+
+.popup span{
+    color: #fff;
+    font-size: 100px;
+}

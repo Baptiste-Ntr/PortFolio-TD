@@ -4,11 +4,22 @@
 <!DOCTYPE html>
 <html lang="FR">
 <head>
+    <!-- Google Analytics -->
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1Q00H81VTF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1Q00H81VTF');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="portfolio, baptiste, nautre, baptiste-nautre, baptiste nautre, front-end, dev front, front, front-end, dev front-end, nautre baptiste, freelance, portfolio baptiste nautre">
     <meta name="description" content="Bienvenue sur mon portfolio, n'hesitez pas a me contacter pour plus d'information">
+    <meta name="author" content="Baptiste Nautré">
     <title>PortFolio de Baptiste Nautré</title>
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -31,10 +42,21 @@
     <script defer src="./JS/setProject.js"></script>
     <script defer src="./JS/checkEmail.js"></script>
 
+    <!-- PWA Builder -->
+
     <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        if (typeof navigator.serviceWorker !== 'undefined') {
+            navigator.serviceWorker.register('./JS/pwabuilder-sw.js')
+            console.log('oui')
+        }
+    </script>
 </head>
 <body>
+
+    <!-- Site -->
+
     <header>
         <nav>
             <ul>
@@ -73,7 +95,7 @@
             </div>
             <div id="p3">
                 <aside></aside>
-                <h3>Integration TP</h3>
+                <h3>Quizz</h3>
             </div>
         </section>
     </section>
@@ -97,17 +119,21 @@
             <h1>Contact</h1>
             <div class="input-name">
                 <input type="text" name="form-name" id="form-name" required>
-                <label for="">
-                    <span id="name"> Votre Nom</span>
-                </label>
+                    <span id="name" aria-label="form-name">
+                        <label for="form-name">Votre Nom</label>
+                    </span>
             </div>
             <div class="input-mail">
                 <input type="text" name="form-mail" id="form-mail" required>
-                <span id="mail"> Votre Email</span>
+                    <span id="mail" aria-label="form-mail">
+                        <label for="form-mail">Votre Email</label>
+                    </span>
             </div>
             <div class="input-message" >
                 <textarea name="form-message" id="form-message" cols="80" rows="10" required></textarea>
-                <span id="message">Votre message</span>
+                    <span id="message" aria-label="form-message">
+                        <label for="form-message">Votre message</label>
+                    </span>
             </div>
             <div id="btnsend">Envoyer</div>
             <input type="submit" id="submit" value="">

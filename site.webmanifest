@@ -1,0 +1,34 @@
+{
+    "name": "Portfolio de Baptiste Nautré",
+    "short_name": "B.Nautre",
+    "icons": [
+        {
+            "src": "/android-chrome-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "fullscreen",
+    "start_url": "https://baptiste-nautre.fr/",
+    "scope": "https://baptiste-nautre.fr/",
+    "lang": "fr",
+    "orientation": "portrait",
+    "description": "Portfolio de Baptiste Nautré",
+    "categories": [
+        "personalization",
+        "productivity"
+    ]
+}
